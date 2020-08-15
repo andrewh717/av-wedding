@@ -15,7 +15,43 @@ body {
     text-align: center;
 }
 
+#story {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+#travel {
+    margin-top: 50px;
+    margin-bottom:25px;
+}
+
+#weddingparty {
+    margin-top: 50px;
+    margin-bottom:25px;
+}
+
+#photos {
+    margin-top: 50px;
+    margin-bottom:25px;
+}
+
+#registry {
+    margin-top: 50px;
+    margin-bottom:25px;
+}
+
+#faq {
+    margin-top: 50px;
+    margin-bottom:25px;
+}
+
+
 #rsvp-button {
     margin-top: 25px;
     font-size: 1em;
+}
+
+.navbar {
+    bottom: 0;
+    position: fixed;
 }
