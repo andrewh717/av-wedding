@@ -16,39 +16,46 @@ body {
 }
 
 #story {
-    margin-top: 50px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: lightblue;
 }
 
 #travel {
-    margin-top: 50px;
-    margin-bottom:25px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: lightgray;
 }
 
 #weddingparty {
-    margin-top: 50px;
-    margin-bottom:25px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: lightblue;
 }
 
 #photos {
-    margin-top: 50px;
-    margin-bottom:25px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: lightgray;
 }
 
 #registry {
-    margin-top: 50px;
-    margin-bottom:25px;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: lightblue;
 }
 
 #faq {
-    margin-top: 50px;
-    margin-bottom:25px;
+    padding-top: 25px;
+    padding-bottom: 150px;
+    background-color: lightgray;
 }
 
 
 #rsvp-button {
     margin-top: 25px;
     font-size: 1em;
+    margin-bottom: 25px
 }
 
 .navbar {
