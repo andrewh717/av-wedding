@@ -65,3 +65,13 @@ body {
     text-align: center;
     margin-left: -15px;
 }
+
+.img-container {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .img-container {
+        max-height: 100vh;
+    }
+}
