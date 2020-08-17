@@ -15,6 +15,25 @@ body {
     text-align: center;
 }
 
+.fixed-top {
+    position: absolute;
+    top: 20%;
+}
+
+h1 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .fixed-top {
+        top: 10%;
+    }
+}
+
 #story {
     padding-top: 25px;
     padding-bottom: 50px;
