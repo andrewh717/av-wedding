@@ -77,6 +77,24 @@ h1 {
     margin-bottom: 25px
 }
 
+.rsvp-name {
+    text-align: left;
+}
+
+#name-box {
+    left:-15px;
+}
+
+.rsvp-guests {
+    text-align:left;
+}
+
+.rsvp-check {
+    text-align: left;
+    padding-left: 15px
+}
+
+
 .navbar {
     bottom: 0;
     position: fixed;

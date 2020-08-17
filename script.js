@@ -1,11 +1,9 @@
-console.log('Hello world.');
-foo();
-function foo(){
-    console.log('Inside foo');
-}
-function bar(x){
-    for (let index = 0; index < x; index++) {
-        console.log(index);
-    }
-}
-bar(2);
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzYM3D-VZDfpc7Y2W0mb-aGJzXcA5MErQ63NCE3ROjhTKi8_-6i/exec'
+  const form = document.forms['rsvp-form']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })

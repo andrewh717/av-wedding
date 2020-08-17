@@ -17,11 +17,13 @@
   <div class="row">
     <div class="fixed-top col col-12">
       <h1>
-      Andrew & Vanessa
-      <br>
-      Date to be announced
-      <br>
-      <button id="rsvp-button">RSVP</button>
+        Andrew & Vanessa
+        <br>
+        Date to be announced
+        <br>
+        <button id="rsvp-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#rsvpButton">
+          RSVP
+        </button>
       </h1>
     </div>
   </div>
@@ -103,6 +105,50 @@
       </ul>
     </div>
   </nav>
+  <div class="modal fade" id="rsvpButton" tabindex="-1" role="dialog" aria-labelledby="rsvpButtonLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">RSVP</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form name="rsvp-form" id="rsvp">
+                  <div class="rsvp-name">
+                    Full Name
+                    <div id="name-box" class="col">
+                      <input name="name" type="text" class="form-control">
+                      <br>
+                    </div>
+                  </div>
+                  <div class="rsvp-guests">
+                    <label for="exampleFormControlTextarea1">Guests</label>
+                    <textarea name="guests" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="rsvp-check">
+                    Will you be attending?
+                    <br>
+                    <input name="response" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Yes" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="rsvp-check">
+                    <input name="response" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="No">
+                    <label class="form-check-label" for="exampleRadios2">
+                      No
+                    </label>
+                  </div>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">RSVP</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>
@@ -113,6 +159,9 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
   <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
