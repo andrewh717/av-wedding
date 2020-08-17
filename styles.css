@@ -16,7 +16,7 @@ body {
 }
 
 .fixed-top {
-    position: absolute;
+    position: absolute; 
     top: 20%;
 }
 
