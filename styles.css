@@ -61,4 +61,7 @@ body {
 .navbar {
     bottom: 0;
     position: fixed;
+    width: 100%;
+    text-align: center;
+    margin-left: -15px;
 }
