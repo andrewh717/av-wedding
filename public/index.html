@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
@@ -21,7 +22,7 @@
         <br>
         Date to be announced
         <br>
-        <button id="rsvp-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#rsvpButton">
+        <button id="rsvp-button" type="button" class="btn btn-primary">
           RSVP
         </button>
       </h1>
@@ -105,12 +106,12 @@
       </ul>
     </div>
   </nav>
-  <div class="modal fade" id="rsvpButton" tabindex="-1" role="dialog" aria-labelledby="rsvpButtonLabel"
+  <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">RSVP</h5>
+          <h5 class="modal-title" id="rsvpModalLabel">RSVP</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -177,7 +178,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
-  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script type="module" src="script.js" defer></script>
   </script>
 </body>
 
