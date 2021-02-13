@@ -10,7 +10,7 @@ const Banner = () => {
       <div className="row">
         <div id="banner" className="fixed-top col col-12">
           <h1>
-            Andrew & Vanessa
+            Andrew &amp; Vanessa
             <br />
             Date to be announced
             <br />
