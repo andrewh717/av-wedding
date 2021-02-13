@@ -1,6 +1,5 @@
+/* eslint-disable no-undef */
 'use strict';
-import RsvpModal from './rsvp-modal';
-ReactDOM.render(<RsvpModal />, document.querySelector('rsvp-modal-container'));
 
 console.log(firebase);
 const db = firebase.firestore();

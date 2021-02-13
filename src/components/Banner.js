@@ -1,28 +1,29 @@
 import React from 'react';
-import RsvpModal from './RsvpModal';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
-    return (
-			<div>
-				<div class="row">
-					<img class="img-fluid" src={"assets/engagement1.jpg"} alt="Andrew and Vanessa"></img>
-				</div>
-				<div class="row">
-					<div class="fixed-top col col-12">
-						<h1>
-							Andrew & Vanessa
-							<br/>
-							Date to be announced
-							<br/>
-							{/* <button id="rsvp-button" type="button" class="btn btn-primary">
-								RSVP
-							</button> */}
-							<RsvpModal />
-						</h1>
-    			</div>
-				</div>
-			</div>
-    )
-}
+  return (
+    <div>
+      <div className="row">
+        <img className="img-fluid" src={'assets/engagement1.jpg'} alt="Andrew and Vanessa"></img>
+      </div>
+      <div className="row">
+        <div id="banner" className="fixed-top col col-12">
+          <h1>
+            Andrew & Vanessa
+            <br />
+            Date to be announced
+            <br />
+            <Link to="/rsvp">
+              <button id="rsvp-button" type="button" className="btn btn-primary">
+                RSVP
+              </button>
+            </Link>
+          </h1>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Banner;
