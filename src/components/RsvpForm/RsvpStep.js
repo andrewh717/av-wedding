@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RsvpStep = (props) => {
+export default function RsvpStep(props) {
   if (props.step !== 1) {
     return null;
   }
@@ -11,5 +11,3 @@ const RsvpStep = (props) => {
     </div>
   );
 };
-
-export default RsvpStep;

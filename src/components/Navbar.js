@@ -69,8 +69,8 @@ const Navbar = () => {
 export default Navbar;
 
 function route(currPath, destPath) {
-  console.log('currPath', currPath);
-  console.log('destPath', destPath);
+  // console.log('currPath', currPath);
+  // console.log('destPath', destPath);
   let route = destPath;
   if (currPath === '/' && destPath === '/') {
     window.scrollTo(0, 0);
