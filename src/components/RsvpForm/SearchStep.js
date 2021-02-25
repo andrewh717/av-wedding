@@ -18,16 +18,15 @@ export default function SearchStep(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    search();
+    getGuestInfo();
   };
 
   if (props.step !== 0) {
     return null;
   }
 
-  function search() {
+  function getGuestInfo() {
     const {firstName, lastName} = state;
-    console.log('inside search function', firstName, lastName);
     db.collection('guests')
       .where('firstName', '==', firstName)
       .where('lastName', '==', lastName)
@@ -35,13 +34,30 @@ export default function SearchStep(props) {
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           console.log(doc.data());
-          // Do stuff with data found
-          // TODO: Get everyone in this person's party and pass all the data to RsvpStep
+          let guestInfo = doc.data();
+          getPartyMembers(guestInfo.partyId);
         });
       })
       .catch((error) => {
         console.log('Error getting documents: ', error);
       });
+  }
+
+  function getPartyMembers(partyId) {
+    let partyMembers = [];
+    db.collection('guests')
+    .where('partyId', '==', partyId)
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        partyMembers.push(doc.data());
+      });
+      console.log(partyMembers);
+      // Now pass this data to the RsvpStep
+    })
+    .catch((error) => {
+      console.log('Error getting documents: ', error);
+    });
   }
 
   return (
