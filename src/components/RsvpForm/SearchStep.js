@@ -25,39 +25,62 @@ export default function SearchStep(props) {
     return null;
   }
 
+  // function getGuestInfo() {
+  //   const {firstName, lastName} = state;
+  //   db.collection('guests')
+  //     .where('firstName', '==', firstName)
+  //     .where('lastName', '==', lastName)
+  //     .get()
+  //     .then((querySnapshot) => {
+  //       querySnapshot.forEach((doc) => {
+  //         console.log(doc.data());
+  //         let guestInfo = doc.data();
+  //         getPartyMembers(guestInfo.partyId);
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log('Error getting documents: ', error);
+  //     });
+  // }
   function getGuestInfo() {
     const {firstName, lastName} = state;
-    db.collection('guests')
-      .where('firstName', '==', firstName)
-      .where('lastName', '==', lastName)
-      .get()
-      .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-          console.log(doc.data());
-          let guestInfo = doc.data();
-          getPartyMembers(guestInfo.partyId);
-        });
-      })
-      .catch((error) => {
-        console.log('Error getting documents: ', error);
-      });
+    getPartyMembers();
   }
 
-  function getPartyMembers(partyId) {
-    let partyMembers = [];
-    db.collection('guests')
-    .where('partyId', '==', partyId)
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        partyMembers.push(doc.data());
-      });
-      console.log(partyMembers);
-      // Now pass this data to the RsvpStep
-    })
-    .catch((error) => {
-      console.log('Error getting documents: ', error);
-    });
+  // function getPartyMembers(partyId) {
+  //   let partyMembers = [];
+  //   db.collection('guests')
+  //   .where('partyId', '==', partyId)
+  //   .get()
+  //   .then((querySnapshot) => {
+  //     querySnapshot.forEach((doc) => {
+  //       partyMembers.push(doc.data());
+  //     });
+  //     console.log(partyMembers);
+  //     // Now pass this data to the RsvpStep
+  //     props.setPartyData(partyMembers);
+  //     props.setCurrStep(props.step + 1);
+  //   })
+  //   .catch((error) => {
+  //     console.log('Error getting documents: ', error);
+  //   });
+  // }
+  function getPartyMembers() {
+    const partyMembers = [{
+      firstName: "Alexio",
+      hasResponded: false,
+      isAttending: false,
+      lastName: "Mota",
+      partyId: 1
+    }, {
+      firstName: "Alison",
+      hasResponded: false,
+      isAttending: false,
+      lastName: "Hernandez",
+      partyId: 1
+    }];
+    props.setPartyData(partyMembers);
+    props.setCurrStep(props.step + 1);
   }
 
   return (

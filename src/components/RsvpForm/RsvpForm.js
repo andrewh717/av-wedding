@@ -7,6 +7,7 @@ import SubmitStep from './SubmitStep';
 
 const RsvpForm = () => {
   const [currStep, setCurrStep] = useState(0);
+  const [partyData, setPartyData] = useState([]);
 
   function _next(step) {
     step = step >= 1 ? 2 : step + 1;
@@ -24,7 +25,7 @@ const RsvpForm = () => {
     let step = props.step;
     // console.log('currStep: ', step);
     if (step < 2) {
-      return <button className="btn btn-primary" onClick={() => _next(step)}>Next</button>;
+      return <button className="btn btn-primary left-btn" onClick={() => _next(step)}>Next</button>;
     }
     return null;
   }
@@ -40,8 +41,8 @@ const RsvpForm = () => {
   return (
     <React.Fragment>
       <form>
-        <SearchStep step={currStep} />
-        <RsvpStep step={currStep} />
+        <SearchStep step={currStep} setCurrStep={setCurrStep} setPartyData={setPartyData}/>
+        <RsvpStep step={currStep} partyData={partyData}/>
         <SubmitStep step={currStep} />
       </form>
       <NextButton step={currStep}></NextButton>
