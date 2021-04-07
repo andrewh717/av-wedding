@@ -7,7 +7,8 @@ const SubmitStep = (props) => {
 
   return (
     <div>
-      <p>Submitted!</p>
+      <p>Your RSVP has been sent.</p>
+      <p>Looking forward to seeing you at our wedding! <br/>- Andrew &amp; Vanessa</p>
     </div>
   );
 };

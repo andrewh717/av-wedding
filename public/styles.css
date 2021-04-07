@@ -21,17 +21,8 @@ body {
 }
 
 h1 {
-  color: white;
-  font-size: 1.8rem;
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.2rem;
-  }
-  .fixed-top {
-    top: 10%;
-  }
+  font-family: 'Sacramento', cursive;
+  font-size: 5rem;
 }
 
 #story {
@@ -74,6 +65,20 @@ h1 {
   margin-top: 25px;
   font-size: 1em;
   margin-bottom: 25px;
+  width: 100%;
+  max-width: 15%;
+}
+
+#banner {
+  color: white;
+}
+
+.banner-img-container {
+  background-color: black;
+}
+
+.banner-img {
+  opacity: .75;
 }
 
 .rsvp-name {
@@ -102,7 +107,7 @@ h1 {
 }
 
 .rsvp-row {
-	padding: 0 15px 15px 15px;
+	padding-bottom: 15px;
 	display: flex;
 	justify-content: space-between;
 }
@@ -123,8 +128,30 @@ h1 {
   text-align: left;
 }
 
+.section-header {
+  font-family: 'Sacramento', cursive;
+  font-size: 3.25rem;
+}
+
+/* Desktop only */
 @media (min-width: 768px) {
   .img-container {
     max-height: 100vh;
+  }
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .fixed-top {
+    top: 10%;
+  }
+  #rsvp-button {
+    max-width: 30%;
   }
 }

@@ -6,18 +6,16 @@ export default function RsvpStep(props) {
     return null;
   }
 
-  function handleAccept(event, guestInfo) {
+  function handleAccept(event, guestInfo, guestKey) {
     event.preventDefault();
     guestInfo.isAttending = true;
     guestInfo.hasResponded = true;
-    console.log(props.partyData);
   };
 
-  function handleDecline(event, guestInfo) {
+  function handleDecline(event, guestInfo, guestKey) {
     event.preventDefault();
     guestInfo.isAttending = false;
     guestInfo.hasResponded = true;
-    console.log(props.partyData);
   };
 
   function handleSubmit(event) {
@@ -35,13 +33,19 @@ export default function RsvpStep(props) {
     return (
       <div>
         {props.partyData.map(guest => {
-          const guestKey = guest.data.firstName + '_' + guest.data.lastName;
+          const guestKey = guest.data.firstName.toLowerCase() + '-' + guest.data.lastName.toLowerCase();
           return (
           <div className="rsvp-row" key={guestKey}>
             <p>{guest.data.firstName} {guest.data.lastName}</p>
-            <div>
-              <button className="btn btn-primary left-btn" onClick={(event) => handleAccept(event, guest.data)}>Accept</button>
-              <button className="btn btn-primary" onClick={(event) => handleDecline(event, guest.data)}>Decline</button>
+            <div className="btn-group btn-group-toggle" data-toggle="buttons">
+              <label className="btn btn-outline-primary">
+                <input type="radio" name="options" id={guestKey + '-accept'} onClick={(event) => handleAccept(event, guest.data, guestKey)}/>
+                Accept
+              </label>
+              <label className="btn btn-outline-primary">
+                <input type="radio" name="options" id={guestKey + '-decline'} onClick={(event) => handleDecline(event, guest.data, guestKey)}/>
+                Decline
+              </label>
             </div>
           </div>
           )
@@ -51,7 +55,8 @@ export default function RsvpStep(props) {
   }
 
   return (
-    <div>
+    <div className="px-3">
+      <p>Please make a selection for each member of your party</p>
       <RsvpRow></RsvpRow>
       <button className="btn btn-primary" onClick={handleSubmit}>Send RSVP</button>
     </div>

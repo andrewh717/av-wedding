@@ -11,7 +11,7 @@ const Navbar = () => {
             return route(location.pathname, '/');
           }}
         >
-          A&V
+          A&amp;V
         </Link>
         <button
           className="navbar-toggler"
@@ -32,32 +32,29 @@ const Navbar = () => {
               </HashLink>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="#travel">
+              <HashLink smooth to="/#travel">
                 Travel <span className="sr-only">(current)</span>
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="#weddingparty">
+              <HashLink smooth to="/#weddingparty">
                 Wedding Party <span className="sr-only">(current)</span>
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="#photos">
+              <HashLink smooth to="/#photos">
                 Photos <span className="sr-only">(current)</span>
-              </a>
+              </HashLink>
             </li>
             <li className="nav-item active">
-              {/* <a className="nav-link" href="#registry">
-                Registry <span className="sr-only">(current)</span>
-              </a> */}
               <HashLink smooth to="/#registry">
                 Registry <span className="sr-only">(current)</span>
               </HashLink>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="#faq">
+              <HashLink smooth to="/#faq">
                 FAQ <span className="sr-only">(current)</span>
-              </a>
+              </HashLink>
             </li>
           </ul>
         </div>
@@ -69,14 +66,11 @@ const Navbar = () => {
 export default Navbar;
 
 function route(currPath, destPath) {
-  // console.log('currPath', currPath);
-  // console.log('destPath', destPath);
   let route = destPath;
   if (currPath === '/' && destPath === '/') {
-    window.scrollTo(0, 0);
+    window.scrollTo({top: 0, behavior: 'smooth'});
   } else if (currPath !== '/') {
-    route = `/${destPath}`;
+    route = `${destPath}`;
   }
-  console.log('Routing to: ', route);
   return route;
 }

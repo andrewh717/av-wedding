@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import { db } from '../../firebase';
+import Snackbar from '@material-ui/core/Snackbar';
+import Alert from '../Alert';
 
 export default function SearchStep(props) {
   const [state, setState] = useState({
     firstName: '',
     lastName: '',
   });
+  const [showError, setShowError] = useState(false);
+  const handleClose = () => {
+    setShowError(false);
+  };
 
+  // Needed to have defaultValue when using next/previous buttons
   const handleChange = (event) => {
     const { id, value } = event.target;
     setState((prevState) => ({
@@ -38,6 +45,7 @@ export default function SearchStep(props) {
             getPartyMembers(guestInfo.partyId);
           });
         } else {
+          setShowError(true);
           console.log('No documents found for given input');
         }
       })
@@ -45,10 +53,6 @@ export default function SearchStep(props) {
         console.log('Error getting documents: ', error);
       });
   }
-  // function getGuestInfo() {
-  //   const {firstName, lastName} = state;
-  //   getPartyMembers();
-  // }
 
   function getPartyMembers(partyId) {
     let partyMembers = [];
@@ -57,7 +61,6 @@ export default function SearchStep(props) {
       .get()
       .then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
-          // console.log('Document ID: ', doc.id)
           let guestInfo = doc.data();
           partyMembers.push({
             id: doc.id,
@@ -73,38 +76,46 @@ export default function SearchStep(props) {
         console.log('Error getting documents: ', error);
       });
   }
-  // function getPartyMembers() {
-  //   const partyMembers = [{
-  //     firstName: "Alexio",
-  //     hasResponded: false,
-  //     isAttending: false,
-  //     lastName: "Mota",
-  //     partyId: 1
-  //   }, {
-  //     firstName: "Alison",
-  //     hasResponded: false,
-  //     isAttending: false,
-  //     lastName: "Hernandez",
-  //     partyId: 1
-  //   }];
-  //   props.setPartyData(partyMembers);
-  //   props.setCurrStep(props.step + 1);
-  // }
 
   return (
     <div className="search-step">
+      <p>
+        If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.
+      </p>
       <div className="form-group">
         <label htmlFor="firstName">First Name</label>
-        <input type="text" id="firstName" className="form-control" onChange={handleChange} defaultValue={state.firstName} />
+        <input
+          type="text"
+          id="firstName"
+          className="form-control"
+          onChange={handleChange}
+          defaultValue={state.firstName}
+        />
       </div>
       <div className="form-group">
         <label htmlFor="lastName">Last Name</label>
-        <input type="text" id="lastName" className="form-control" onChange={handleChange} defaultValue={state.lastName} />
+        <input
+          type="text"
+          id="lastName"
+          className="form-control"
+          onChange={handleChange}
+          defaultValue={state.lastName}
+        />
       </div>
 
       <button className="btn btn-primary" onClick={handleSubmit}>
         Search
       </button>
+      <Snackbar
+        open={showError}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+      >
+        <Alert onClose={handleClose} severity="error">
+          Did you enter your name correctly? Please try again.
+        </Alert>
+      </Snackbar>
     </div>
   );
 }
