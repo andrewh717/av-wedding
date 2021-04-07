@@ -84,6 +84,14 @@ h1 {
   left: -15px;
 }
 
+.rsvp-form {
+  margin-bottom: 1rem;
+}
+
+.search-step {
+  padding: 0 15px 0 15px;
+}
+
 .rsvp-guests {
   text-align: left;
 }
@@ -109,6 +117,10 @@ h1 {
   width: 100%;
   text-align: center;
   margin-left: -15px;
+}
+
+.form-group {
+  text-align: left;
 }
 
 @media (min-width: 768px) {
