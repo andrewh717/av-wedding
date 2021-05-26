@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Banner from 'components/Banner';
 import Story from 'components/Story';
-import Travel from 'components/Travel';
+import WhenWhere from 'components/WhenWhere';
 import WeddingParty from 'components/WeddingParty';
 import Photos from 'components/Photos';
 import Registry from 'components/Registry';
@@ -32,7 +32,7 @@ function Home() {
     <div>
       <Banner />
       <Story />
-      <Travel />
+      <WhenWhere />
       <WeddingParty />
       <Photos />
       <Registry />

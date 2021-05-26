@@ -34,8 +34,8 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li className="nav-item active">
-                <HashLink smooth to="/#travel">
-                  Travel <span className="sr-only">(current)</span>
+                <HashLink smooth to="/#whenwhere">
+                  When &amp; Where <span className="sr-only">(current)</span>
                 </HashLink>
               </li>
               <li className="nav-item active">
