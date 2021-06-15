@@ -133,6 +133,10 @@ h1 {
   font-size: 3.25rem;
 }
 
+#whenwhere h2 {
+  color: white;
+}
+
 /* Desktop only */
 @media (min-width: 768px) {
   .img-container {
@@ -142,6 +146,9 @@ h1 {
   .rsvp-form {
     max-width: 50%;
     margin: auto;
+  }
+  .nav-item {
+    margin: 0 15px;
   }
 }
 
