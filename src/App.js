@@ -4,7 +4,6 @@ import './App.css';
 import Home from 'components/Home';
 import Rsvp from 'components/Rsvp';
 import Navbar from 'components/Navbar';
-import WhenWhere from 'components/WhenWhere';
 
 const App = () => {
   return (
