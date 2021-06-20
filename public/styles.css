@@ -1,110 +1,154 @@
 img {
-    max-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #343a40;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button > a {
+  color: white;
+}
+
+button > a:hover {
+  text-decoration: none;
+  color: lightgray;
 }
 
 .container {
-    padding: 0;
+  padding: 0;
 }
 
 .center-text {
-    text-align: center;
+  text-align: center;
 }
 
 .fixed-top {
-    position: absolute; 
-    top: 20%;
+  position: absolute;
+  top: 20%;
 }
 
 h1 {
-    color: white;
-    font-size: 1.8rem;
+  font-family: 'Sacramento', cursive;
+  font-size: 5rem;
 }
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.2rem;
-    }
-    .fixed-top {
-        top: 10%;
-    }
-}
-
-#story {
-    padding-top: 25px;
-    padding-bottom: 50px;
-    background-color: lightblue;
-}
-
-#travel {
-    padding-top: 25px;
-    padding-bottom: 50px;
-    background-color: lightgray;
-}
-
-#weddingparty {
-    padding-top: 25px;
-    padding-bottom: 50px;
-    background-color: lightblue;
-}
-
-#photos {
-    padding-top: 25px;
-    padding-bottom: 50px;
-    background-color: lightgray;
-}
-
-#registry {
-    padding-top: 25px;
-    padding-bottom: 50px;
-    background-color: lightblue;
-}
-
-#faq {
-    padding-top: 25px;
-    padding-bottom: 150px;
-    background-color: lightgray;
-}
-
 
 #rsvp-button {
-    margin-top: 25px;
-    font-size: 1em;
-    margin-bottom: 25px
+  margin-top: 25px;
+  font-size: 1em;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 15%;
+}
+
+#banner {
+  color: white;
+}
+
+.banner-img-container {
+  background-color: black;
+}
+
+.banner-img {
+  opacity: .75;
 }
 
 .rsvp-name {
-    text-align: left;
+  text-align: left;
 }
 
 #name-box {
-    left:-15px;
+  left: -15px;
+}
+
+.rsvp-form {
+  margin-bottom: 1rem;
+}
+
+.search-step {
+  padding: 0 15px 0 15px;
 }
 
 .rsvp-guests {
-    text-align:left;
+  text-align: left;
 }
 
 .rsvp-check {
-    text-align: left;
-    padding-left: 15px
+  text-align: left;
+  padding-left: 15px;
 }
 
+.rsvp-row {
+	padding-bottom: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.left-btn {
+	margin-right: 8px;
+}
 
 .navbar {
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    margin-left: -15px;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  margin-left: -15px;
 }
 
+.form-group {
+  text-align: left;
+}
+
+.section-container {
+  padding: 30px;
+}
+
+.section-header {
+  font-family: 'Sacramento', cursive;
+  font-size: 3.25rem;
+}
+
+/* Desktop only */
 @media (min-width: 768px) {
-    .img-container {
-        max-height: 100vh;
-    }
+  .img-container {
+    max-height: 100vh;
+  }
+  .rsvp-form {
+    max-width: 50%;
+    margin: auto;
+  }
+  .nav-item {
+    margin: 0 15px;
+  }
+  .section-container {
+    padding: 100px;
+  }
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .fixed-top {
+    top: 10%;
+  }
+  #rsvp-button {
+    max-width: 30%;
+  }
 }
