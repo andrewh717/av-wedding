@@ -34,29 +34,24 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li className="nav-item active">
-                <HashLink smooth to="/#whenwhere">
+                <HashLink smooth to="/#when-and-where">
                   When &amp; Where <span className="sr-only">(current)</span>
                 </HashLink>
               </li>
               <li className="nav-item active">
-                <HashLink smooth to="/#weddingparty">
-                  Wedding Party <span className="sr-only">(current)</span>
-                </HashLink>
-              </li>
-              <li className="nav-item active">
-                <HashLink smooth to="/#photos">
-                  Photos <span className="sr-only">(current)</span>
-                </HashLink>
-              </li>
-              <li className="nav-item active">
-                <HashLink smooth to="/#registry">
+                <Link to="/registry">
                   Registry <span className="sr-only">(current)</span>
-                </HashLink>
+                </Link>
               </li>
               <li className="nav-item active">
                 <HashLink smooth to="/#faq">
                   FAQ <span className="sr-only">(current)</span>
                 </HashLink>
+              </li>
+              <li className="nav-item active">
+                <Link to="/rsvp">
+                  RSVP
+                </Link>
               </li>
             </ul>
           </div>

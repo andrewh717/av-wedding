@@ -103,7 +103,7 @@ export default function SearchStep(props) {
         />
       </div>
 
-      <button className="btn btn-primary" onClick={handleSubmit}>
+      <button className="btn btn-dark" onClick={handleSubmit}>
         Search
       </button>
       <Snackbar

@@ -1,10 +1,29 @@
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #343a40;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+button > a {
+  color: white;
+}
+
+button > a:hover {
+  text-decoration: none;
+  color: lightgray;
 }
 
 .container {
@@ -23,42 +42,6 @@ body {
 h1 {
   font-family: 'Sacramento', cursive;
   font-size: 5rem;
-}
-
-#story {
-  padding-top: 25px;
-  padding-bottom: 50px;
-  background-color: lightblue;
-}
-
-#whenwhere {
-  padding-top: 25px;
-  padding-bottom: 50px;
-  background-color: lightgray;
-}
-
-#weddingparty {
-  padding-top: 25px;
-  padding-bottom: 50px;
-  background-color: lightblue;
-}
-
-#photos {
-  padding-top: 25px;
-  padding-bottom: 50px;
-  background-color: lightgray;
-}
-
-#registry {
-  padding-top: 25px;
-  padding-bottom: 50px;
-  background-color: lightblue;
-}
-
-#faq {
-  padding-top: 25px;
-  padding-bottom: 150px;
-  background-color: lightgray;
 }
 
 #rsvp-button {
@@ -128,13 +111,13 @@ h1 {
   text-align: left;
 }
 
+.section-container {
+  padding: 30px;
+}
+
 .section-header {
   font-family: 'Sacramento', cursive;
   font-size: 3.25rem;
-}
-
-#whenwhere h2 {
-  color: white;
 }
 
 /* Desktop only */
@@ -142,13 +125,15 @@ h1 {
   .img-container {
     max-height: 100vh;
   }
-
   .rsvp-form {
     max-width: 50%;
     margin: auto;
   }
   .nav-item {
     margin: 0 15px;
+  }
+  .section-container {
+    padding: 100px;
   }
 }
 

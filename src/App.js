@@ -1,17 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Banner from 'components/Banner';
-import Story from 'components/Story';
-import WhenWhere from 'components/WhenWhere';
-import WeddingParty from 'components/WeddingParty';
-import Photos from 'components/Photos';
-import Registry from 'components/Registry';
-import Faq from 'components/Faq';
+import Home from 'components/Home';
 import Rsvp from 'components/Rsvp';
 import Navbar from 'components/Navbar';
+import WhenWhere from 'components/WhenWhere';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
@@ -24,20 +19,6 @@ function App() {
       </Switch>
       <Navbar />
     </Router>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <Banner />
-      <Story />
-      <WhenWhere />
-      <WeddingParty />
-      <Photos />
-      <Registry />
-      <Faq />
-    </div>
   );
 }
 

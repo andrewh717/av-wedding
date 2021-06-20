@@ -58,7 +58,7 @@ export default function RsvpStep(props) {
     <div className="px-3">
       <p>Please make a selection for each member of your party</p>
       <RsvpRow></RsvpRow>
-      <button className="btn btn-primary" onClick={handleSubmit}>Send RSVP</button>
+      <button className="btn btn-dark" onClick={handleSubmit}>Send RSVP</button>
     </div>
   );
 };
