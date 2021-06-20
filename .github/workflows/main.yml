@@ -21,6 +21,12 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@master
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: npm ci
+      - run: npm run build
       
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
