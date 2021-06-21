@@ -3,7 +3,7 @@ import { db } from '../../firebase';
 import Snackbar from '@material-ui/core/Snackbar';
 import Alert from '../Alert';
 
-export default function SearchStep(props) {
+const SearchStep = (props) => {
   const [state, setState] = useState({
     firstName: '',
     lastName: '',
@@ -31,16 +31,15 @@ export default function SearchStep(props) {
     return null;
   }
 
-  function getGuestInfo() {
+  const getGuestInfo = () => {
     const { firstName, lastName } = state;
     db.collection('guests')
-      .where('firstName', '==', firstName)
-      .where('lastName', '==', lastName)
+      .where('firstName', '==', firstName.trim())
+      .where('lastName', '==', lastName.trim())
       .get()
       .then((querySnapshot) => {
         if (querySnapshot.size > 0) {
           querySnapshot.forEach((doc) => {
-            console.log(doc.data());
             let guestInfo = doc.data();
             getPartyMembers(guestInfo.partyId);
           });
@@ -54,7 +53,7 @@ export default function SearchStep(props) {
       });
   }
 
-  function getPartyMembers(partyId) {
+  const getPartyMembers = (partyId) => {
     let partyMembers = [];
     db.collection('guests')
       .where('partyId', '==', partyId)
@@ -67,7 +66,6 @@ export default function SearchStep(props) {
             data: guestInfo,
           });
         });
-        console.log(partyMembers);
         // Now pass this data to the RsvpStep
         props.setPartyData(partyMembers);
         props.setCurrStep(props.step + 1);
@@ -119,3 +117,5 @@ export default function SearchStep(props) {
     </div>
   );
 }
+
+export default SearchStep;

@@ -1,7 +1,7 @@
 import React from 'react';
 import RsvpForm from './RsvpForm/RsvpForm';
 
-export default function Rsvp() {
+const Rsvp = () => {
   return (
     <div className="mt-3">
       <h1 style={{color: "black"}}>
@@ -11,3 +11,5 @@ export default function Rsvp() {
     </div>
   );
 };
+
+export default Rsvp;
