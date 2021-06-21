@@ -120,6 +120,12 @@ h1 {
   font-size: 3.25rem;
 }
 
+.disabled.selected {
+  color: white;
+  background-color: #007bff;
+  opacity: .65;
+}
+
 /* Desktop only */
 @media (min-width: 768px) {
   .img-container {

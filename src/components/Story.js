@@ -17,7 +17,7 @@ const Story = () => {
           inseparable ever since and live together with their loving cat, Oreo. 
           <br />
           <div className="pt-3">
-            <em>- Andrew</em>
+            <p>- Andrew</p>
           </div>
         </div>
       </div>
