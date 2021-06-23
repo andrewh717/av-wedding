@@ -1,4 +1,6 @@
 /.firebase
+/util/*.csv
+/util/serviceAccountKey.json
 
 # dependencies
 /node_modules
