@@ -24,9 +24,26 @@ const RsvpStep = (props) => {
     props.partyData.forEach((guest) => {
       const documentRef = db.collection('guests').doc(guest.id);
       batch.update(documentRef, guest.data);
+      // Post RSVP to Google Sheets after Firestore is updated
+      postToGoogleSheets(guest.data);
     });
     batch.commit().catch((err) => console.error(err));
     props.setCurrStep(props.step + 1);
+  };
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzYM3D-VZDfpc7Y2W0mb-aGJzXcA5MErQ63NCE3ROjhTKi8_-6i/exec';
+
+  const getFormData = (object) =>
+    Object.keys(object).reduce((formData, key) => {
+      formData.append(key, object[key]);
+      return formData;
+    }, new FormData());
+
+  const postToGoogleSheets = (guestInfo) => {
+    const { hasResponded, ...guestData } = guestInfo;
+    fetch(scriptURL, { method: 'POST', body: getFormData(guestData), mode: 'no-cors' })
+      .then((response) => console.log('Success!', response))
+      .catch((error) => console.error('Error!', error.message));
   };
 
   const RsvpRow = () => {
