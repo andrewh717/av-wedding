@@ -10,13 +10,22 @@ admin.initializeApp({
 
 const db = admin.firestore();
 const batch = db.batch();
-let rowRef;
+let rowRef, rowData, rowId;
+let count = 1;
 fs.createReadStream('guestList.csv')
   .pipe(csv())
   .on('data', (row) => {
-    // console.log(row);
-    rowRef = db.collection('guests').doc();
-    batch.set(rowRef, row);
+    rowId = `${row.firstName.charAt(0)}${row.lastName}${row.partyId}${count}`;
+    rowRef = db.collection('guests').doc(rowId);
+    rowData = {
+      firstName: row.firstName,
+      lastName: row.lastName,
+      partyId: Number(row.partyId),
+      hasResponded: (row.hasResponded === true),
+      isAttending: (row.isAttending === true)
+    };
+    batch.set(rowRef, rowData);
+    count++;
   })
   .on('end', () => {
     console.log('CSV file successfully processed');
