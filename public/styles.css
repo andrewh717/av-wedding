@@ -132,6 +132,14 @@ h3 {
   opacity: .65;
 }
 
+.nav-link {
+  padding: 0;
+}
+
+#hotel-btn-group > button {
+  min-width: 10rem;
+}
+
 /* Desktop only */
 @media (min-width: 768px) {
   .img-container {
