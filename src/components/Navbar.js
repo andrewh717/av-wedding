@@ -5,7 +5,7 @@ import { HashLink } from 'react-router-hash-link'
 const Navbar = () => {
   return (
     <div>
-      <nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav id="navbar" className="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link
             className="navbar-brand"
@@ -27,28 +27,28 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
                 <HashLink smooth to="/#story">
-                  Our Story <span className="sr-only">(current)</span>
+                  Our Story
                 </HashLink>
               </li>
-              <li className="nav-item active">
+              <li className="nav-item">
                 <HashLink smooth to="/#when-and-where">
-                  When &amp; Where <span className="sr-only">(current)</span>
+                  When &amp; Where
                 </HashLink>
               </li>
-              <li className="nav-item active">
+              <li className="nav-item">
                 <Link to="/registry">
-                  Registry <span className="sr-only">(current)</span>
+                  Registry
                 </Link>
               </li>
-              <li className="nav-item active">
+              <li className="nav-item">
                 <HashLink smooth to="/#faq">
-                  FAQ <span className="sr-only">(current)</span>
+                  FAQ
                 </HashLink>
               </li>
-              <li className="nav-item active">
+              <li className="nav-item">
                 <Link to="/rsvp">
                   RSVP
                 </Link>
