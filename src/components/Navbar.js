@@ -39,19 +39,19 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li className="nav-item">
-                <Link to="/registry">
-                  Registry
-                </Link>
-              </li>
-              <li className="nav-item">
                 <HashLink smooth to="/#faq">
                   FAQ
                 </HashLink>
               </li>
               <li className="nav-item">
-                <Link to="/rsvp">
+                <a className="nav-link disabled" href="https://smile.amazon.com/wedding/andrew-hernandez-vanessa-gao--may-2022/registry/4HV3BFAGT7OH">
+                  Registry
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/rsvp">
                   RSVP
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
