@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link'
 
 const Navbar = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+        const ismobile = window.innerWidth < 576;
+        if (ismobile !== isMobile) setIsMobile(ismobile);
+    }, false);
+  }, [isMobile]);
+  
   return (
     <div>
-      <nav id="navbar" className="navbar fixed-bottom navbar-expand-lg navbar-light bg-light">
+      <nav id="navbar" className={`navbar ${isMobile ? "fixed-bottom" : "fixed-top"} navbar-expand-lg navbar-light bg-light`}>
         <div className="container-fluid">
           <Link
             className="navbar-brand"

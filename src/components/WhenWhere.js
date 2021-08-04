@@ -4,7 +4,7 @@ const WhenWhere = () => {
   return (
     <div>
       <div className="row">
-        <img src="/assets/primaveraCeremony.jpg" alt="" />
+        <img className="section-img" src="/assets/primaveraCeremony.jpg" alt="Primavera Regency outdoor ceremony space" />
       </div>
       <div className="row">
         <div id="when-and-where" className="col col-12 section-container">
@@ -27,7 +27,7 @@ const WhenWhere = () => {
         </div>
       </div>
       <div className="row">
-        <img src="/assets/primaveraReception.jpeg" alt="" />
+        <img className="section-img" src="/assets/primaveraReception.jpeg" alt="" />
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ const RsvpForm = () => {
 
   return (
     <React.Fragment>
+      {currStep === 0 ? <h3>Please RSVP using the form below</h3> : ''}
       <form className="rsvp-form" autoComplete="off">
         <SearchStep step={currStep} setCurrStep={setCurrStep} setPartyData={setPartyData}/>
         <RsvpStep step={currStep} setCurrStep={setCurrStep} partyData={partyData}/>

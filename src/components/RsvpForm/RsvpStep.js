@@ -69,6 +69,7 @@ const RsvpStep = (props) => {
                     type="radio"
                     name="options"
                     id={guestKey + '-accept'}
+                    className="btn-check"
                     onClick={(event) => handleAccept(event, guest.data, guestKey)}
                   />
                   Accept
@@ -84,6 +85,7 @@ const RsvpStep = (props) => {
                     type="radio"
                     name="options"
                     id={guestKey + '-decline'}
+                    className="btn-check"
                     onClick={(event) => handleDecline(event, guest.data, guestKey)}
                   />
                   Decline
