@@ -101,7 +101,7 @@ const SearchStep = (props) => {
         />
       </div>
 
-      <button className="btn btn-dark" onClick={handleSubmit}>
+      <button className="btn btn-dark mt-3" onClick={handleSubmit}>
         Search
       </button>
       <Snackbar
