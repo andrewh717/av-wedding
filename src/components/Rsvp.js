@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import RsvpForm from './RsvpForm/RsvpForm';
+// import RsvpForm from './RsvpForm/RsvpForm';
 
 const Rsvp = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
