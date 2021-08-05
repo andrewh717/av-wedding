@@ -27,9 +27,9 @@ button > a:hover {
   color: lightgray;
 }
 
-.row>* {
+/* .row>* {
   padding: 0;
-}
+} */
 
 .container {
   padding: 0;
@@ -44,7 +44,12 @@ button > a:hover {
   top: 25%;
 }
 
-h1 {
+#banner > h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 8rem;
+}
+
+#banner > h2 {
   font-family: 'Sacramento', cursive;
   font-size: 5rem;
 }
@@ -65,8 +70,17 @@ h3 {
   color: white;
 }
 
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .banner-img-container {
   background-color: black;
+  background-image: url("assets/bannerImageEdited.jpg");
+  min-height: 100vh;
 }
 
 .banner-img {
@@ -149,11 +163,26 @@ h3 {
 }
 
 .nav-link {
+  font-size: 1.25rem;
   padding: 0;
+  color: #343a40;
+}
+
+.nav-link.active.tab {
+  color: #0d6efd;
 }
 
 #hotel-btn-group > button {
   min-width: 10rem;
+}
+
+.circle {
+  border-radius: 100%;
+}
+
+.name-label {
+  font-weight: bold;
+  padding-top: 1.25rem;
 }
 
 /* Desktop only */
@@ -169,13 +198,16 @@ h3 {
     margin: 0 15px;
   }
   .section-container {
-    padding: 2.5rem 25%;
+    padding: 4.5rem 25%;
+  }
+  #weddingparty {
+    padding: 4.5rem 10%; 
   }
 }
 
 /* Mobile only */
 @media (max-width: 768px) {
-  h1 {
+  #banner > h1 {
     font-size: 3.2rem;
   }
   h2 {
@@ -187,4 +219,17 @@ h3 {
   #rsvp-button {
     max-width: 30%;
   }
+  .circle {
+    padding: 1.25rem;
+  }
+}
+
+.primavera-ceremony {
+  background-image: url('assets/primaveraCeremony.jpg');
+  min-height: 50vh;
+}
+
+.primavera-reception {
+  background-image: url('assets/primaveraReception.jpg');
+  min-height: 50vh;
 }

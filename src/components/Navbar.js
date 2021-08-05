@@ -52,6 +52,11 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li className="nav-item">
+                <HashLink smooth to="/#weddingparty">
+                  Wedding Party
+                </HashLink>
+              </li>
+              <li className="nav-item">
                 <a className="nav-link disabled" href="https://smile.amazon.com/wedding/andrew-hernandez-vanessa-gao--may-2022/registry/4HV3BFAGT7OH">
                   Registry
                 </a>
