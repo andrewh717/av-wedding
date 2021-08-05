@@ -18,6 +18,12 @@ a:hover {
   text-decoration: none;
 }
 
+a.disabled {
+  color: rgb(0 0 0 / 30%);
+  cursor: default;
+  pointer-events: none;
+}
+
 button > a {
   color: white;
 }

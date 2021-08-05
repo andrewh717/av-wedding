@@ -1,6 +1,23 @@
 import React from 'react';
+import { groomsmen } from '../data/groomsmen';
+import { bridesmaids } from '../data/bridesmaids';
 
 const WeddingParty = () => {
+  const TabContent = (props) => {
+    return (
+      <div className="row pt-4">
+        {props.people.map((person) => {
+          return (
+            <div className="col-12 col-sm-3" key={person.name}>
+              <img src={person.image} alt={person.name} className="circle"/>
+              <p className="name-label">{person.name}</p>
+            </div>
+          )
+        })}
+      </div>
+    )
+  }
+
   return (
     <div>
       <div className="row">
@@ -20,27 +37,10 @@ const WeddingParty = () => {
           </ul>
           <div id="weddingparty-tab-content" className="tab-content">
             <div id="groomsmen" className="tab-pane fade show active" role="tabpanel">
-              <div className="row pt-4">
-                <div className="col col-sm-3">
-                  <img src="assets/kevin.jpg" alt="Kevin" className="circle"/>
-                  <p className="name-label">Kevin Hernandez</p>
-                </div>
-                <div className="col col-sm-3">
-                  <img src="assets/joe.jpg" alt="Joe" className="circle"/>
-                  <p className="name-label">Joseph Redling-Pace</p>
-                </div>
-                <div className="col col-sm-3">
-                  <img src="assets/cheng.jpg" alt="Cheng" className="circle"/>
-                  <p className="name-label">Chenghao Lin</p>
-                </div>
-                <div className="col col-sm-3">
-                  <img src="assets/justin.jpg" alt="Justin" className="circle"/>
-                  <p className="name-label">Justin Rhodes</p>
-                </div>
-              </div>
+              <TabContent people={groomsmen}/>
             </div>
             <div id="bridesmaids" className="tab-pane fade" role="tabpanel">
-              women
+              <TabContent people={bridesmaids}/>
             </div>
           </div>
         </div>
