@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Timeline from './Timeline';
 
 const WhenWhere = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
+  useEffect(() => {
+    window.addEventListener(
+      'resize',
+      () => {
+        const ismobile = window.innerWidth < 576;
+        if (ismobile !== isMobile) setIsMobile(ismobile);
+      },
+      false,
+    );
+  }, [isMobile]);
+  
   return (
     <div>
-      <div className="row parallax primavera-ceremony">
+      <div className={`row parallax primavera-ceremony ${isMobile ? "mobile" : ""}`}>
         {/* <img className="section-img" src="/assets/primaveraCeremony.jpg" alt="Primavera Regency outdoor ceremony space" /> */}
       </div>
       <div id="whenwhere" className="row">
@@ -32,7 +44,7 @@ const WhenWhere = () => {
         </div>
         <Timeline />
       </div>
-      <div className="row parallax primavera-reception">
+      <div className={`row parallax primavera-reception ${isMobile ? "mobile" : ""}`}>
         {/* <img className="section-img" src="/assets/primaveraReception.jpeg" alt="" /> */}
       </div>
     </div>

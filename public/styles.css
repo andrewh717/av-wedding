@@ -149,6 +149,10 @@ h3 {
   text-align: left;
 }
 
+.footer {
+  padding: 1.25rem;
+}
+
 .section-container {
   padding: 30px;
 }
@@ -232,6 +236,9 @@ h3 {
   .circle {
     padding: 1.25rem;
   }
+  .footer {
+    padding-bottom: 2rem;
+  }
 }
 
 .primavera-ceremony {
@@ -239,9 +246,17 @@ h3 {
   min-height: 50vh;
 }
 
+.primavera-ceremony.mobile {
+  background-image: url('assets/primaveraCeremonyMobile.jpg');
+}
+
 .primavera-reception {
   background-image: url('assets/primaveraReception.jpg');
   min-height: 50vh;
+}
+
+.primavera-reception.mobile {
+  background-image: url('assets/primaveraReceptionMobile.jpg');
 }
 
 .timeline {
