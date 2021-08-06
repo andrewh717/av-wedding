@@ -239,6 +239,9 @@ h3 {
   .footer {
     padding-bottom: 2rem;
   }
+  .parallax {
+    background-attachment: scroll;
+  }
 }
 
 .primavera-ceremony {
