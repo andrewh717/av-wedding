@@ -4,6 +4,7 @@ import Story from 'components/Story';
 import WhenWhere from 'components/WhenWhere';
 import Faq from 'components/Faq';
 import WeddingParty from './WeddingParty';
+import Footer from './Footer';
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <WhenWhere />
       <WeddingParty />
       <Faq />
+      <Footer />
     </div>
   );
 }

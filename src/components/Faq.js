@@ -6,6 +6,17 @@ const Faq = () => {
       <div id="faq" className="col col-12 section-container">
         <h2 className="section-header">Things You May Be Wondering</h2>
         <div className="p-3 px-sm-5 py-sm-4">
+          <h3>What about COVID?</h3>
+          <p className="mb-0">
+            We planned our wedding for May 2022 in the hopes that this pandemic will be behind us at
+            that point, but for the safety of all our family, friends, and the venue's staff:&nbsp;
+            <b>
+              we kindly ask that all guests be vaccinated if eligible. Please let us know if you are
+              unable to be vaccinated by May 7, 2022. If you don't feel well, please stay home.
+            </b>
+          </p>
+        </div>
+        <div className="p-3 px-sm-5 py-sm-4">
           <h3>Where can I stay?</h3>
           <p>
             We have a hotel block at the Embassy Suites by Berkeley Heights. If you'd like a room,
@@ -38,15 +49,20 @@ const Faq = () => {
         </div>
         <div className="p-3 px-sm-5 py-sm-4">
           <h3>What time should I get there?</h3>
-          <p>Please arrive at the Primavera Regency by 6pm. There is a large parking lot so don't worry about looking for parking!</p>
-        </div>
-        <div className="p-3 px-sm-5 py-sm-4">
-          <h3>What time will the reception end?</h3>
-          <p>11:00pm</p>
+          <p>
+            Please arrive at the Primavera Regency by 6pm. There is a large parking lot so don't
+            worry about looking for parking!
+          </p>
         </div>
         <div className="p-3 px-sm-5 py-sm-4">
           <h3>What colors will the wedding party be wearing?</h3>
-          <p>The bridesmaids will be wearing some sort of light blue and the groomsmen will be wearing gray. <span role="img" aria-label="smiley face">😁</span></p>
+          <p>
+            The bridesmaids will be wearing some sort of light blue and the groomsmen will be
+            wearing gray.{' '}
+            <span role="img" aria-label="smiley face">
+              😁
+            </span>
+          </p>
         </div>
       </div>
     </div>
