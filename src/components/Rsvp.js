@@ -1,22 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import useMobile from '../hooks/useMobile';
 // import RsvpForm from './RsvpForm/RsvpForm';
 
 const Rsvp = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
-  useEffect(() => {
-    window.addEventListener(
-      'resize',
-      () => {
-        const ismobile = window.innerWidth < 576;
-        if (ismobile !== isMobile) setIsMobile(ismobile);
-      },
-      false,
-    );
-  }, [isMobile]);
-
+  const isMobile = useMobile();
   return (
     <div>
       <div className="row rsvp-img-container">
+        {/* TODO: Make rsvp image lower resolution so it loads faster */}
         <img className={`rsvp-img ${isMobile ? '' : 'pt-5'}`} src={isMobile ? "assets/rsvpImageMobile.jpg" : "assets/rsvpImage.jpg"} alt="" />
       </div>
       <div className="container temp">

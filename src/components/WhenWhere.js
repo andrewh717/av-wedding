@@ -1,19 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Timeline from './Timeline';
+import useMobile from '../hooks/useMobile';
 
 const WhenWhere = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
-  useEffect(() => {
-    window.addEventListener(
-      'resize',
-      () => {
-        const ismobile = window.innerWidth < 576;
-        if (ismobile !== isMobile) setIsMobile(ismobile);
-      },
-      false,
-    );
-  }, [isMobile]);
-  
+  const isMobile = useMobile();
   return (
     <div>
       <div className={`row parallax primavera-ceremony ${isMobile ? "mobile" : ""}`}>
