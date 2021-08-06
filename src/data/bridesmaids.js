@@ -8,7 +8,7 @@ export const bridesmaids = [
     image: 'assets/sam.jpg'
   },
   {
-    name: 'Samantha Choudhary',
+    name: 'Samantha Choudhury',
     image: 'assets/sammy.jpg'
   },
   {
