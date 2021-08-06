@@ -26,8 +26,8 @@ const Navbar = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -47,13 +47,13 @@ const Navbar = () => {
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink smooth to="/#faq">
-                  FAQ
+                <HashLink smooth to="/#weddingparty">
+                  Wedding Party
                 </HashLink>
               </li>
               <li className="nav-item">
-                <HashLink smooth to="/#weddingparty">
-                  Wedding Party
+                <HashLink smooth to="/#faq">
+                  FAQ
                 </HashLink>
               </li>
               <li className="nav-item">
