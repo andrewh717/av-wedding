@@ -9,7 +9,7 @@ Reception: 8:00pm - 12:00am
 
 const Timeline = () => {
   return (
-      <div className="row pb-5">
+      <div className="py-5 pt-md-3">
         <div className="col-md-12">
           <h2 className="section-header">Events of the Day</h2>
           <ul className="timeline">
