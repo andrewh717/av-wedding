@@ -7,7 +7,6 @@ const Rsvp = () => {
   return (
     <div>
       <div className="row rsvp-img-container">
-        {/* TODO: Make rsvp image lower resolution so it loads faster */}
         <img className={`rsvp-img ${isMobile ? '' : 'pt-5'}`} src={isMobile ? "assets/rsvpImageMobile.jpg" : "assets/rsvpImage.jpg"} alt="" />
       </div>
       <div className="container temp">
