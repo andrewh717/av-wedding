@@ -23,24 +23,24 @@ const WeddingParty = () => {
       <div className="row">
         <div id="weddingparty" className="section-container col col-12">
           <h2 className="section-header">Wedding Party</h2>
-          <ul className="nav nav-tabs nav-fill" role="tablist">
+          <ul className="nav nav-tabs nav-fill pt-4" role="tablist">
             <li className="nav-item" role="presentation">
-              <button className="nav-link active tab" data-bs-toggle="tab" data-bs-target="#groomsmen" type="button" role="tab">
-                Groomsmen
+              <button className="nav-link tab active" data-bs-toggle="tab" data-bs-target="#bridesmaids" type="button" role="tab">
+                Bridesmaids
               </button>
             </li>
             <li className="nav-item" role="presentation">
-              <button className="nav-link tab" data-bs-toggle="tab" data-bs-target="#bridesmaids" type="button" role="tab">
-                Bridesmaids
+              <button className="nav-link tab" data-bs-toggle="tab" data-bs-target="#groomsmen" type="button" role="tab">
+                Groomsmen
               </button>
             </li>
           </ul>
           <div id="weddingparty-tab-content" className="tab-content">
-            <div id="groomsmen" className="tab-pane fade show active" role="tabpanel">
-              <TabContent people={groomsmen}/>
-            </div>
-            <div id="bridesmaids" className="tab-pane fade" role="tabpanel">
+            <div id="bridesmaids" className="tab-pane fade show active" role="tabpanel">
               <TabContent people={bridesmaids}/>
+            </div>
+            <div id="groomsmen" className="tab-pane fade" role="tabpanel">
+              <TabContent people={groomsmen}/>
             </div>
           </div>
         </div>

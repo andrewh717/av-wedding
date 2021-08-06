@@ -13,6 +13,6 @@ export const bridesmaids = [
   },
   {
     name: 'Ashley Vonhorn',
-    image: 'assets/joe.jpg'
+    image: 'assets/ashley.jpg'
   }
 ];

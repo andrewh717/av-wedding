@@ -4,23 +4,32 @@ import React, { useEffect, useState } from 'react';
 const Rsvp = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    window.addEventListener(
+      'resize',
+      () => {
         const ismobile = window.innerWidth < 576;
         if (ismobile !== isMobile) setIsMobile(ismobile);
-    }, false);
+      },
+      false,
+    );
   }, [isMobile]);
 
   return (
     <div>
-      <div className="row">
-        <img className={`rsvp-img ${isMobile ? "" : "pt-5"}`} src="assets/rsvpImage.jpg" alt="" />
+      <div className="row rsvp-img-container">
+        <img className={`rsvp-img ${isMobile ? '' : 'pt-5'}`} src={isMobile ? "assets/rsvpImageMobile.jpg" : "assets/rsvpImage.jpg"} alt="" />
       </div>
-      <div className="row">
+      <div className="container temp">
+        <h1 className="banner-text temp-text">
+          Please visit this page to RSVP later after our official invitations have been sent out.
+          Thanks!
+        </h1>
+      </div>
+      {/* <div className="row">
         <div className="col col-12 py-3 my-3">
-          <h3>Please visit this page to RSVP later after our official invitations have been sent out. Thanks!</h3>
-          {/* <RsvpForm/> */}
+          <RsvpForm/> 
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
