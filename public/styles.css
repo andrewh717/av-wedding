@@ -18,6 +18,12 @@ a:hover {
   text-decoration: none;
 }
 
+a.disabled {
+  color: rgb(0 0 0 / 30%);
+  cursor: default;
+  pointer-events: none;
+}
+
 button > a {
   color: white;
 }
@@ -25,10 +31,6 @@ button > a {
 button > a:hover {
   text-decoration: none;
   color: lightgray;
-}
-
-.row>* {
-  padding: 0;
 }
 
 .container {
@@ -44,7 +46,12 @@ button > a:hover {
   top: 25%;
 }
 
-h1 {
+#banner > h1 {
+  font-family: 'Sacramento', cursive;
+  font-size: 8rem;
+}
+
+#banner > h2 {
   font-family: 'Sacramento', cursive;
   font-size: 5rem;
 }
@@ -65,22 +72,38 @@ h3 {
   color: white;
 }
 
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .banner-img-container {
   background-color: black;
+  background-image: url('assets/bannerImageEdited.jpg');
+  min-height: 100vh;
 }
 
 .banner-img {
-  opacity: .75;
+  opacity: 0.75;
   padding: 0;
   object-fit: cover;
   width: 100%;
   height: 100vh;
 }
 
+.rsvp-img-container {
+  background-color: black;
+  min-height: 100vh;
+}
+
 .rsvp-img {
+  opacity: 0.75;
   object-fit: cover;
   width: 100%;
-  max-height: 60vh;
+  max-height: 100vh;
+  padding: 0;
 }
 
 .rsvp-name {
@@ -109,13 +132,13 @@ h3 {
 }
 
 .rsvp-row {
-	padding-bottom: 15px;
-	display: flex;
-	justify-content: space-between;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .left-btn {
-	margin-right: 8px;
+  margin-right: 8px;
 }
 
 .navbar {
@@ -145,15 +168,30 @@ h3 {
 .disabled.selected {
   color: white;
   background-color: #007bff;
-  opacity: .65;
+  opacity: 0.65;
 }
 
 .nav-link {
+  font-size: 1.25rem;
   padding: 0;
+  color: #343a40;
+}
+
+.nav-link.active.tab {
+  color: #87ceeb;
 }
 
 #hotel-btn-group > button {
   min-width: 10rem;
+}
+
+.circle {
+  border-radius: 100%;
+}
+
+.name-label {
+  font-weight: bold;
+  padding-top: 1.25rem;
 }
 
 /* Desktop only */
@@ -169,13 +207,17 @@ h3 {
     margin: 0 15px;
   }
   .section-container {
-    padding: 2.5rem 25%;
+    padding: 4.5rem 25%;
+  }
+
+  #weddingparty {
+    padding: 4.5rem 10%;
   }
 }
 
 /* Mobile only */
 @media (max-width: 768px) {
-  h1 {
+  #banner > h1 {
     font-size: 3.2rem;
   }
   h2 {
@@ -187,4 +229,142 @@ h3 {
   #rsvp-button {
     max-width: 30%;
   }
+  .circle {
+    padding: 1.25rem;
+  }
+}
+
+.primavera-ceremony {
+  background-image: url('assets/primaveraCeremony.jpg');
+  min-height: 50vh;
+}
+
+.primavera-reception {
+  background-image: url('assets/primaveraReception.jpg');
+  min-height: 50vh;
+}
+
+.timeline {
+  border-left: 3px solid #87ceeb;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  margin: 0 auto;
+  letter-spacing: 0.2px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 0 50px;
+  list-style: none;
+  text-align: left;
+  max-width: 40%;
+}
+
+@media (max-width: 767px) {
+  .timeline {
+    max-width: 98%;
+    padding: 25px;
+  }
+}
+
+.timeline h1 {
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+.timeline h2,
+.timeline h3 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.timeline .event {
+  border-bottom: 1px dashed #e8ebf1;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .timeline .event {
+    padding-top: 30px;
+  }
+}
+
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline .event:before {
+  left: -207px;
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 100;
+  font-size: 0.9em;
+  min-width: 120px;
+}
+
+@media (max-width: 767px) {
+  .timeline .event:before {
+    left: 0px;
+    text-align: left;
+  }
+}
+
+.timeline .event:after {
+  -webkit-box-shadow: 0 0 0 3px #87ceeb;
+  box-shadow: 0 0 0 3px #87ceeb;
+  left: -55.8px;
+  background: #fff;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  content: '';
+  top: 3px;
+}
+
+@media (max-width: 767px) {
+  .timeline .event:after {
+    left: -31.8px;
+  }
+}
+
+.rtl .timeline {
+  border-left: 0;
+  text-align: right;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-right: 3px solid #87ceeb;
+}
+
+.rtl .timeline .event::before {
+  left: 0;
+  right: -170px;
+}
+
+.rtl .timeline .event::after {
+  left: 0;
+  right: -55.8px;
+}
+
+#whenwhere {
+  min-height: 100vh;
+}
+
+.temp-text {
+  color: white;
+  text-align: left;
+  padding: 1.5rem;
+  top: 10%;
 }

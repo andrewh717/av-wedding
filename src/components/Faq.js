@@ -45,8 +45,8 @@ const Faq = () => {
           <p>11:00pm</p>
         </div>
         <div className="p-3 px-sm-5 py-sm-4">
-          <h3>What should I not wear?</h3>
-          <p>The bridesmaids will be wearing some sort of light blue and the groomsmen will be wearing gray. Please dress accordingly. <span role="img" aria-label="smiley face">😁</span></p>
+          <h3>What colors will the wedding party be wearing?</h3>
+          <p>The bridesmaids will be wearing some sort of light blue and the groomsmen will be wearing gray. <span role="img" aria-label="smiley face">😁</span></p>
         </div>
       </div>
     </div>
