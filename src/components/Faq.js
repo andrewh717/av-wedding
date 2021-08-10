@@ -20,7 +20,8 @@ const Faq = () => {
           <h3>Where can I stay?</h3>
           <p>
             We have a hotel block at the Embassy Suites by Berkeley Heights. If you'd like a room,
-            please reserve by April 29, 2022.
+            please reserve by April 29, 2022. There will be a shuttle provided for transportation
+            between the hotel and the wedding venue.
           </p>
           <p>
             <em>Embassy Suites by Hilton Berkeley Heights</em>
