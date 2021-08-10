@@ -48,6 +48,25 @@ const Faq = () => {
           </div>
         </div>
         <div className="p-3 px-sm-5 py-sm-4">
+          <h3>What should I wear?</h3>
+          <p>
+            The dress code for our wedding is{' '}
+            <a
+              className="link"
+              href="https://www.google.com/search?q=cocktail+attire"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              cocktail attire
+            </a>
+            . Ladies, please refrain from wearing white. The bridesmaids will be wearing some sort
+            of light blue and the groomsmen will be wearing gray.{' '}
+            <span role="img" aria-label="smiley face">
+              😁
+            </span>
+          </p>
+        </div>
+        <div className="p-3 px-sm-5 py-sm-4">
           <h3>What time should I get there?</h3>
           <p>
             Please arrive at the Primavera Regency by 6pm. There is a large parking lot so don't
@@ -55,13 +74,44 @@ const Faq = () => {
           </p>
         </div>
         <div className="p-3 px-sm-5 py-sm-4">
-          <h3>What colors will the wedding party be wearing?</h3>
+          <h3>How do I RSVP?</h3>
           <p>
-            The bridesmaids will be wearing some sort of light blue and the groomsmen will be
-            wearing gray.{' '}
-            <span role="img" aria-label="smiley face">
-              😁
+            You can RSVP right here on our website by clicking "RSVP" in the menu bar, or by
+            clicking{' '}
+            <a className="link" href="/rsvp">
+              here
+            </a>
+            . If you experience any problems when filling out the form, feel free to reach out to
+            Andrew directly at (201) 841-1553.
+          </p>
+        </div>
+        <div className="p-3 px-sm-5 py-sm-4">
+          <h3>Can I bring a date?</h3>
+          <p>
+            When you fill out the RSVP form, you will see an option to RSVP for your guest if we've
+            given you a +1.
+          </p>
+        </div>
+        <div className="p-3 px-sm-5 py-sm-4">
+          <h3>Can I take my own pictures?</h3>
+          <p>
+            Feel free to take as many pictures and Instagram/Snapchat stories as you'd like during
+            the cocktail hour and reception! We simply ask that you do not take pictures during the
+            ceremony. We're going to have professional photographers capturing beautiful photos
+            throughout the night that we will share later. The last thing we want is people showing
+            up in photos of the ceremony with their phones out!{' '}
+            <span role="img" aria-label="smiley face with sweat">
+              😅
             </span>
+          </p>
+        </div>
+        <div className="p-3 px-sm-5 py-sm-4">
+          <h3>So I have some dietary restrictions...</h3>
+          <p>
+            No problem! We know for certain that there will be vegetarian options, but for further
+            dietary restrictions just reach out to us and we will gladly contact the venue to ensure
+            you can be accomodated. The food we've tasted from the Primavera Regency has been
+            incredible and we definitely don't want you to miss out!
           </p>
         </div>
       </div>
