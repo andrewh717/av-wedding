@@ -78,7 +78,7 @@ const SearchStep = (props) => {
   return (
     <div className="search-step">
       <p>
-        If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.
+        If you're responding for yourself and a guest (or your family), you'll be able to RSVP for your entire group.
       </p>
       <div className="form-group">
         <label htmlFor="firstName">First Name</label>

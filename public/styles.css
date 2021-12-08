@@ -100,14 +100,16 @@ h3 {
 
 .rsvp-img-container {
   background-color: black;
-  min-height: 100vh;
+  min-height: 45vh;
+  /* min-height: 100vh; Used when hiding RSVP form */
 }
 
 .rsvp-img {
   opacity: 0.75;
   object-fit: cover;
   width: 100%;
-  max-height: 100vh;
+  max-height: 45vh;
+  /* max-height: 100vh; */
   padding: 0;
 }
 
@@ -246,6 +248,14 @@ h3 {
   }
   .parallax {
     background-attachment: scroll;
+  }
+  .rsvp-img-container {
+    min-height: 30vh;
+    /* min-height: 100vh; Used when hiding RSVP form */
+  }
+  .rsvp-img {
+    max-height: 30vh;
+    /* max-height: 100vh; */
   }
 }
 
