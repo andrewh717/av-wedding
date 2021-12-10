@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { db } from '../../firebase';
-import Snackbar from '@material-ui/core/Snackbar';
-import Alert from '../Alert';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 
 const SearchStep = (props) => {
   const [state, setState] = useState({
@@ -111,6 +112,7 @@ const SearchStep = (props) => {
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
         <Alert onClose={handleClose} severity="error">
+          <AlertTitle>Error</AlertTitle>
           Did you enter your name correctly? Please try again.
         </Alert>
       </Snackbar>
