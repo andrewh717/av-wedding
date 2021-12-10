@@ -182,6 +182,10 @@ h3 {
   opacity: 0.65;
 }
 
+.btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus {
+  box-shadow: none;
+}
+
 .nav-link {
   font-size: 1.25rem;
   padding: 0;
