@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { db } from '../../firebase';
-import Snackbar from '@material-ui/core/Snackbar';
-import Alert from '../Alert';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 
 const SearchStep = (props) => {
   const [state, setState] = useState({
@@ -78,7 +79,7 @@ const SearchStep = (props) => {
   return (
     <div className="search-step">
       <p>
-        If you're responding for you and a guest (or your family), you'll be able to RSVP for your entire group.
+        If you're responding for yourself and a guest (or your family), you'll be able to RSVP for your entire group.
       </p>
       <div className="form-group">
         <label htmlFor="firstName">First Name</label>
@@ -111,6 +112,7 @@ const SearchStep = (props) => {
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
         <Alert onClose={handleClose} severity="error">
+          <AlertTitle>Error</AlertTitle>
           Did you enter your name correctly? Please try again.
         </Alert>
       </Snackbar>
