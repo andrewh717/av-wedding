@@ -61,7 +61,7 @@ const RsvpStep = (props) => {
               <div className="btn-group" role="group">
                 <input
                   type="radio"
-                  name="options"
+                  name={guestKey + '-options'}
                   id={guestKey + '-accept'}
                   className="btn-check"
                   onClick={(event) => handleAccept(event, guest.data, guestKey)}
@@ -79,7 +79,7 @@ const RsvpStep = (props) => {
                 </label>
                 <input
                   type="radio"
-                  name="options"
+                  name={guestKey + '-options'}
                   id={guestKey + '-decline'}
                   className="btn-check"
                   onClick={(event) => handleDecline(event, guest.data, guestKey)}
