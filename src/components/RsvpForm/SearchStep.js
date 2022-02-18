@@ -10,6 +10,8 @@ const SearchStep = (props) => {
     lastName: '',
   });
   const [showError, setShowError] = useState(false);
+  const [errorCount, setErrorCount] = useState(0);
+
   const handleClose = () => {
     setShowError(false);
   };
@@ -34,9 +36,9 @@ const SearchStep = (props) => {
 
   const getGuestInfo = () => {
     const { firstName, lastName } = state;
+    const fullName = firstName.trim().toUpperCase() + lastName.trim().toUpperCase();
     db.collection('guests')
-      .where('firstName', '==', firstName.trim())
-      .where('lastName', '==', lastName.trim())
+      .where('_fullName', '==', fullName)
       .get()
       .then((querySnapshot) => {
         if (querySnapshot.size > 0) {
@@ -46,6 +48,7 @@ const SearchStep = (props) => {
           });
         } else {
           setShowError(true);
+          setErrorCount(errorCount + 1);
           console.log('No documents found for given input');
         }
       })
@@ -114,6 +117,7 @@ const SearchStep = (props) => {
         <Alert onClose={handleClose} severity="error">
           <AlertTitle>Error</AlertTitle>
           Did you enter your name correctly? Please try again.
+          {errorCount > 1 ? <p>If you continue getting this error, please contact Andrew.</p> : ''}
         </Alert>
       </Snackbar>
     </div>
