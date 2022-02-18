@@ -11,8 +11,9 @@ const Faq = () => {
             We planned our wedding for May 2022 in the hopes that this pandemic will be behind us at
             that point, but for the safety of all our family, friends, and the venue's staff:&nbsp;
             <b>
-              we kindly ask that all guests be vaccinated if eligible. Please let us know if you are
-              unable to be vaccinated by May 7, 2022. If you don't feel well, please stay home.
+              we kindly ask that all guests be fully vaccinated (and boosted!) if eligible. Please
+              let us know if you are unable to be vaccinated by May 7, 2022. If you don't feel well
+              or have recently tested positive for COVID, please stay home.
             </b>
           </p>
         </div>
@@ -60,8 +61,8 @@ const Faq = () => {
             >
               cocktail attire
             </a>
-            . Ladies, please refrain from wearing white. The bridesmaids will be wearing some sort
-            of light blue and the groomsmen will be wearing gray.{' '}
+            . Ladies, please refrain from wearing white. The bridesmaids will be wearing sky blue
+            and the groomsmen will be wearing light gray.{' '}
             <span role="img" aria-label="smiley face">
               😁
             </span>
