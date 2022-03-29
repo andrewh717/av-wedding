@@ -22,7 +22,8 @@ const Faq = () => {
           <p>
             We have a hotel block at the Embassy Suites by Berkeley Heights. If you'd like a room,
             please reserve by April 29, 2022. There will be a shuttle provided for transportation
-            between the hotel and the wedding venue.
+            between the hotel and the wedding venue. Please note: you may want to click the "Edit
+            Stay" button on Hilton's website as the default selection is May 20 - May 22.
           </p>
           <p>
             <em>Embassy Suites by Hilton Berkeley Heights</em>

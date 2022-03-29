@@ -45,9 +45,26 @@ const getHasNotRespondedList = () => {
       });
 }
 
+const getHasRespondedList = () => {
+  const writeStream = fs.createWriteStream('hasResponded.csv', { flags: 'a' });
+  const hasRespondedList = [];
+  db.collection('guests')
+      .where('hasResponded', '==', true)
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach((guest) => {
+          hasRespondedList.push(guest.data());
+        });
+        csv.write(hasRespondedList, { headers: true }).pipe(writeStream);
+      })
+      .catch((error) => {
+        console.log('Error getting documents: ', error);
+      });
+}
 
 
 // updateAllDocs();
 // getHasNotRespondedList();
+getHasRespondedList();
 
 // GOOGLE_APPLICATION_CREDENTIALS="./serviceAccountKey.json" node dbUtil.js
