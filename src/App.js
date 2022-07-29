@@ -14,9 +14,6 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/rsvp">
-          <Rsvp />
-        </Route>
         <Route path="/">
           <Home />
         </Route>

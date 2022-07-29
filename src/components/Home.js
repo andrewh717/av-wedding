@@ -13,7 +13,6 @@ const Home = () => {
       <Story />
       <WhenWhere />
       <WeddingParty />
-      <Faq />
       <Footer />
     </div>
   );
