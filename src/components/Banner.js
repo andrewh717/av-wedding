@@ -14,6 +14,8 @@ const Banner = () => {
           <h2>
             May 21, 2022
           </h2>
+          <br/>
+          <h3>THANK YOU ALL FOR CELEBRATING WITH US! <br/>WE HOPE YOU HAD A GREAT TIME!</h3>
         </div>
       </div>
     </div>
